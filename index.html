@@ -40,10 +40,11 @@
       username, the request text, timestamps, and any price/winner you enter — to <em>that</em> server,
       which you operate (your Show Command app). The developer neither receives nor has access to this
       data.</li>
-    <li><strong>Account sign-in.</strong> The extension requires a Show Command account. When you sign
-      in, your email and password are sent over HTTPS directly to <code>showcommand.live</code> to
-      authenticate you; the extension then stores only the returned access token locally (never your
-      password). Your credentials are sent solely to Show Command's own authentication service.</li>
+    <li><strong>Account sign-in (via your showcommand.live session).</strong> The extension requires a
+      Show Command account. You sign in on <code>showcommand.live</code> itself; the extension then reads
+      your existing session token from that site to authenticate you, and verifies it against
+      <code>showcommand.live</code>. You never enter your password in the extension, and the extension
+      never sees, handles, or stores your password.</li>
   </ul>
 
   <h2>What the extension does NOT do</h2>
@@ -51,10 +52,10 @@
     <li>It does not send any data to the developer or to any third party.</li>
     <li>It shows no advertising and performs no analytics, tracking, profiling, or fingerprinting.</li>
     <li>It never sells or rents your data.</li>
-    <li>Aside from the sign-in step above, it never collects payment card numbers or other financial
-      information, and it never stores your password.</li>
-    <li>It reads pages only on <code>whatnot.com</code> (the live-show chat) and otherwise contacts only
-      <code>showcommand.live</code> to sign you in — it does not read any other websites you visit.</li>
+    <li>It never asks for or handles your password (you sign in on showcommand.live itself), and it never
+      collects payment card numbers or other financial information.</li>
+    <li>It runs only on <code>whatnot.com</code> (to read the live-show chat) and <code>showcommand.live</code>
+      (to read your sign-in session) — it does not read any other websites you visit.</li>
   </ul>
 
   <h2>Permissions and why they are used</h2>
@@ -65,7 +66,8 @@
       relay requests to it.</li>
     <li>Access to <code>whatnot.com</code> — read the live-show chat on the page so requests can be
       detected.</li>
-    <li>Access to <code>showcommand.live</code> — sign you in to your Show Command account.</li>
+    <li>Access to <code>showcommand.live</code> — read your existing sign-in session there so you don't
+      have to sign in again, and verify it.</li>
   </ul>
 
   <h2>Data retention and your control</h2>
